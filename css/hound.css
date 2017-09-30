@@ -1,0 +1,50 @@
+#ingresoPosicion input{
+  width:40px;
+}
+#maze{
+    line-height: 0px;
+}
+
+.fila{
+    width:100%;
+    display:block;
+    line-height: 0px;
+}
+
+.fila div{
+    width:30px;
+    height:30px;
+    outline:1px;
+    display:inline-block;
+    margin:1px;
+}
+.void{
+    background:#b3b3bd;
+}
+
+.path{
+    background:#4CAF50;
+}
+
+.reference{
+    text-align: center;
+    line-height: 55px;
+    font-size: 0.8em;
+}
+
+.inicial{
+    background:yellow !important;
+}
+
+.final{
+    background:orange !important;
+}
+
+.visitado{
+	box-shadow: 2px 2px 2px black;
+}
+
+.solucion{
+	background: #1e2b7a!important;
+	box-shadow: 2px 2px 2px yellow;
+}

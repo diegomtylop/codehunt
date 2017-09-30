@@ -1,0 +1,81 @@
+<!Doctype html>
+<html>
+	<head>
+            <link href="css/hound.css" rel="stylesheet" type="text/css"/>
+						<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+<body>
+	<div class="container-fluid">
+		<img src="img/brujula.jpg" style="max-width: 150px;position:fixed;top:0px;right:0px;">
+		<h1>Pray finder</h1>
+
+		<p>
+			1. To begin select the file with the desired maze (Make sure that the file content is a valid maze, otherwise the result may be unexpected)
+		</p>
+
+		<div class="form-group">
+			<input type="file" id="files" accept=".txt" class="form-control-file"/>
+		</div>
+
+		<div id="ingresoPosicion" style="display:none">
+			<p>
+				2. Enter the hound's and prey position.
+			</p>
+			<div class="form-group">
+				Hound position:
+				<div>
+					<label for="initialX">X</label> <input type="number" id="initialX" value="54">
+					Y <input type="number" id="initialY" value="77">
+				</div>
+			</div>
+
+			<div class="form-group">
+				Prey position:
+				<div>
+					X <input type="number" id="endX" value="12">
+					Y <input type="number" id="endY" value="20">
+				</div>
+			</div>
+			<p class="form-group">
+				<button id="btnInitialPosition" class="btn btn-primary">Let's go for the pray</button>
+			</p>
+		</div>
+
+		<div id="contSolucion" style="display:none">
+				<h2>Solution</h2>
+				<aside>
+					The green shaded cells were visited, the blue cells are the path found.
+				</aside>
+				<p>
+					This are the steps followed by the hound to get the prey
+				</p>
+				<code id="solucion"></code>
+		</div>
+	</div>
+
+	<div id="mazeContainer">
+		<div id="maze">
+
+		</div>
+	</div>
+
+	<div class="modal" id="modalFound">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title">Prey Found</h5>
+			<button type="button" class="close" onclick="$('#modalFound').hide()" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<img src="img/found.jpg" class="rounded mx-auto d-block img-fluid"/>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!--javascript-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/hound.js" type="text/javascript"></script>
+</body>
+</html>
